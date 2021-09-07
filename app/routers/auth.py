@@ -4,7 +4,7 @@ from .. import schemas, database, models, token
 from ..hashing import Hash
 from sqlalchemy.orm import Session
 
-router = APIRouter(tags=["Authentication"])
+router = APIRouter(tags=["Auth"])
 
 
 @router.post("/login")
