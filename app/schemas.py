@@ -48,3 +48,12 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     email: Optional[str] = None
+
+class Backlog(BaseModel):
+    title: str
+    description: str
+    status: str
+    start_date: str
+    end_date: str
+    class Config:
+        orm_mode = True

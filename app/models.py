@@ -23,3 +23,13 @@ class User(Base):
     password = Column(String)
 
     blogs = relationship("Blog", back_populates="creator")
+
+class Backlog(Base):
+    __tablename__ = "backlog"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String)
+    description = Column(String)
+    status = Column(String)
+    start_date = Column(String)
+    end_date = Column(String)

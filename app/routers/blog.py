@@ -17,10 +17,7 @@ def all(
     return blog.get_all(db)
 
 
-@router.post(
-    "/",
-    status_code=status.HTTP_201_CREATED,
-)
+@router.post("/", status_code=status.HTTP_201_CREATED)
 def create(
     request: schemas.Blog,
     db: Session = Depends(get_db),
